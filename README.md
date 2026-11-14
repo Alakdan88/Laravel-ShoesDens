@@ -1,66 +1,141 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ShoesDens – Aplikasi E-Commerce Sepatu
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+ShoesDens adalah aplikasi e-commerce berbasis web yang dikembangkan menggunakan Laravel 10 dan MySQL. Aplikasi ini menyediakan fasilitas pembelian dan pengelolaan produk sepatu secara online.
 
-## About Laravel
+## Fitur Aplikasi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Pembeli
+- Registrasi, login, dan logout.
+- Melihat katalog dan detail produk.
+- Mengelola keranjang belanja.
+- Melakukan checkout dan pemesanan.
+- Mengunggah bukti pembayaran.
+- Melihat status pesanan dan pengiriman.
+- Memberikan ulasan dan rating produk.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Penjual
+- Login sebagai penjual.
+- Mengelola produk dan stok.
+- Mengelola pesanan.
+- Memverifikasi bukti pembayaran.
+- Memperbarui status pesanan dan pengiriman.
+- Melihat laporan penjualan.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Teknologi
+- PHP
+- Laravel 10
+- MySQL
+- HTML, CSS, dan JavaScript
+- Vite
+- Composer
+- Node.js dan npm
 
-## Learning Laravel
+## Persyaratan Sistem
+- PHP 8.1 atau lebih baru, sesuai kompatibilitas dependensi.
+- Composer
+- MySQL
+- Node.js dan npm
+- Web server Apache atau Nginx
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Instalasi Lokal
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. Clone repository:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+   ```bash
+   git clone https://github.com/Alakdan88/Laravel-ShoesDens.git
+   ```
 
-## Laravel Sponsors
+2. Masuk ke folder project:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+   ```bash
+   cd Laravel-ShoesDens
+   ```
 
-### Premium Partners
+3. Instal dependensi PHP:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+   ```bash
+   composer install
+   ```
 
-## Contributing
+4. Instal dependensi frontend:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   ```bash
+   npm install
+   ```
 
-## Code of Conduct
+5. Salin `.env.example` menjadi `.env`, kemudian sesuaikan konfigurasi database lokal.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. Buat application key:
 
-## Security Vulnerabilities
+   ```bash
+   php artisan key:generate
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. Jalankan migrasi database setelah database lokal disiapkan:
 
-## License
+   ```bash
+   php artisan migrate
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. Buat symbolic link untuk file publik:
+
+   ```bash
+   php artisan storage:link
+   ```
+
+9. Bangun aset frontend:
+
+   ```bash
+   npm run build
+   ```
+
+10. Jalankan aplikasi:
+
+    ```bash
+    php artisan serve
+    ```
+
+11. Buka `http://127.0.0.1:8000` di browser.
+
+## Konfigurasi Environment
+
+Sesuaikan pengaturan berikut di file `.env` lokal:
+
+- `APP_NAME`
+- `APP_ENV`
+- `APP_KEY`
+- `APP_DEBUG`
+- `APP_URL`
+- `DB_CONNECTION`
+- `DB_HOST`
+- `DB_PORT`
+- `DB_DATABASE`
+- `DB_USERNAME`
+- `DB_PASSWORD`
+
+Jangan mengunggah file `.env` atau kredensial database ke repository publik.
+
+## Keamanan Aplikasi
+
+Aspek keamanan yang diterapkan dan akan diuji meliputi:
+- Autentikasi pengguna.
+- Pembatasan akses berdasarkan role.
+- Validasi input.
+- Perlindungan CSRF Laravel.
+- Penggunaan hashing password.
+- Pengaturan konfigurasi melalui environment.
+- Pengujian SQL Injection, XSS, IDOR, dan keamanan sesi.
+
+Hasil pengujian keamanan akan didokumentasikan dalam laporan proyek.
+
+## Deployment
+
+URL aplikasi: Akan ditambahkan setelah deployment selesai.
+
+## Penggunaan AI
+
+AI digunakan sebagai alat bantu pembelajaran, konsultasi, debugging, dan evaluasi implementasi selama pengembangan. Seluruh implementasi dan pengujian akhir tetap diperiksa oleh pengembang.
+
+## Pengembang
+
+Proyek individu untuk mata kuliah Cyber Security.

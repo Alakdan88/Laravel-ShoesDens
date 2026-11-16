@@ -13,8 +13,8 @@ ShoesDens adalah aplikasi e-commerce berbasis web yang dikembangkan menggunakan 
 - Melihat status pesanan dan pengiriman.
 - Memberikan ulasan dan rating produk.
 
-### Penjual
-- Login sebagai penjual.
+### Admin
+- Login sebagai admin.
 - Mengelola produk dan stok.
 - Mengelola pesanan.
 - Memverifikasi bukti pembayaran.
